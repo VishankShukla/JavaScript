@@ -28,3 +28,25 @@ Store the result in a variable named `totalCost'.*/
 const calculateTotal = (price,quantity) => price*quantity;
 let totalCost = calculateTotal(299,5);
 console.log(totalCost);
+
+/*4. Write a function named `processTeaOrder that takes another function, `makeTea', as a parameter and calls it with the argument `"earl grey"'.
+Return the result of calling `makeTea'.*/
+function makeTea(teaoftype){
+      return `Maketea: ${teaoftype}`
+}
+function processTeaOrder(TeaFunction){
+   return TeaFunction("Earl grey")
+}
+orderTea = processTeaOrder(makeTea);
+console.log(orderTea);
+
+/*5. Write a function named `createTeaMaker' that returns another function. The returned function should take one parameter, 'teaType', and return a message like '"Makinggreen tea"'.
+Store the returned function in a variable named teaMaker' and call it with '"green tea"`.*/
+
+function createTeaMaker(){
+   return function js(teaType){
+         return `making ${teaType}`
+   }
+}
+let teaMaker = createTeaMaker();
+console.log(teaMaker("green tea"));
